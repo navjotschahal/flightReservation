@@ -3,6 +3,7 @@ package com.navjot.flightReservation.service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.navjot.flightReservation.dto.ReservationRequest;
 import com.navjot.flightReservation.entities.Flight;
@@ -33,6 +34,7 @@ public class ReservationServiceImpl implements ReservationService {
 	EmailUtility mailUtil;
 
 	@Override
+	@Transactional
 	public Reservation bookFlight(ReservationRequest request) {
 		Long flightId = request.getFlightId();
 		Flight flight = flightRepo.getOne(flightId);
