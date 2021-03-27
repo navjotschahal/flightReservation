@@ -34,7 +34,6 @@ public class EmailUtility {
 			mimeMessageHelper.addAttachment("Itinearary", new File(filePath));
 			sender.send(mimeMessage);
 		} catch (MessagingException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		

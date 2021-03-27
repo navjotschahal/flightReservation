@@ -42,14 +42,12 @@ public class PDFGenerator {
 			document.close();
 			
 		} catch (FileNotFoundException | DocumentException e) {
-			// TODO: handle exception
 			e.printStackTrace();
 		}
 		
 	}
 
 	private PdfPTable generateTable(Reservation reservation) {
-		// TODO Auto-generated method stub
 		PdfPTable table = new PdfPTable(2);
 		PdfPCell cell;
 		
